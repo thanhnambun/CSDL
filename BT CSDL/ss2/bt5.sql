@@ -1,16 +1,16 @@
-create database bt5;
-use bt5;
-create table KhachHang(
-	MaKH int,
-    TenKH varchar(100),
-    SoDienThoai varchar(11)not null,
-    primary key (MaKH)
+CREATE DATABASE BT5;
+USE BT5;
+CREATE TABLE Customer (
+    CustomerID INT PRIMARY KEY,
+    CustomerName VARCHAR(100),
+    PhoneNumber VARCHAR(11) NOT NULL,
+    PRIMARY KEY (CustomerID)
 );
 
-create table HoaDon(
-	MaHD int ,
-    NgayLap date,
-    MaKH int,
-    primary key (MaHD),
-    FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH)
+CREATE TABLE Invoice (
+    InvoiceID INT PRIMARY KEY,
+    InvoiceDate DATE,
+    CustomerID INT,
+    PRIMARY KEY (InvoiceID),
+    FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
 );

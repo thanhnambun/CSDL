@@ -1,13 +1,15 @@
 use test1;
-insert into NhanVien(MaNV,HoTen,NgayVaolam,Luong)
+insert into Employee(EmployeeID, FullName, StartDate, Salary)
 values 
-(1,'nam','2008-01-16',5000),
-(2,'nam1','2008-01-16',6000),
-(3,'nam2','2000-01-16',7000);
-SELECT * FROM NhanVien;
-update NhanVien
-set Luong = 7000
-where MaNV =1 ;
+(1, 'Nam', '2008-01-16', 5000),
+(2, 'Nam1', '2008-01-16', 6000),
+(3, 'Nam2', '2000-01-16', 7000);
 
-delete from  NhanVien
-where MaNV =3;
+SELECT * FROM Employee;
+
+update Employee
+set Salary = 7000
+where EmployeeID = 1;
+
+delete from Employee
+where EmployeeID = 3;

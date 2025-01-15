@@ -1,6 +1,6 @@
 create database bt8;
 use bt8;
-create table diem(
+create table Grade (
 	idPoint int ,
 	idStudent varchar(20),
     pointStudent DECIMAL(3,1) CHECK (pointStudent BETWEEN 0 AND 10),
