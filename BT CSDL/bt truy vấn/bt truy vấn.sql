@@ -241,3 +241,17 @@ SELECT YEAR(NgaySinh) AS NamSinh, COUNT(*) AS SoLuongSV
 FROM DMSV
 GROUP BY NamSinh
 HAVING COUNT(*) = 2;
+
+select *
+from dmsv
+group by noisinh 
+having COUNT(*) > 2;
+
+select *
+from ketqua
+group by mamh 
+having COUNT(*) > 3;
+
+select * 
+from ketqua
+where lanthi > 2 ;
